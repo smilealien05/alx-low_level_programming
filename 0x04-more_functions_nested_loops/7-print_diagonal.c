@@ -4,24 +4,26 @@
  * @n: variable save number of time
  * Return: void
  */
-
 void print_diagonal(int n)
 {
-	int a, b;
-
-	if (n > 0)
+	if (n <= 0)
 	{
-		for (a = 0; a < n; a++)
-		{
-			for (b = 0; b < a; b++)
-				_putchar(' ');
-			_putchar('\\');
-			if (a == (n - 1))
-				break;
-			else
-				_putchar('\n');
-		}
+		_putchar('\n');
+	} else
+	{
+		int i, j;
 
+		for (i = 0; i < n; i++)
+		{
+			for (j = 0; j < n; j++)
+			{
+				if (j == i)
+					_putchar('\\');
+				else if (j < i)
+					_putchar(' ');
+			}
+			_putchar('\n');
+		}
 	}
-	_putchar('\n');
 }
+
