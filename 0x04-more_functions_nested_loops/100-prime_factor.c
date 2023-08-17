@@ -15,7 +15,6 @@ int main(void)
 		{
 			n /= i;
 			printf("%ld", i);
-			i = 2;
 		} else
 		{
 			i++;
