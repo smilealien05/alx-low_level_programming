@@ -37,5 +37,7 @@ int _atoi(char *s)
 		}
 		i++;
 	}
+	if (result == 0)
+		return (0);
 	return (sign * result);
 }
