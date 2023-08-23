@@ -11,7 +11,7 @@ int start = 0;
 int i;
 
 n--;
-while (start < n / 2)
+while (start < n)
 {
 i = a[start];
 a[start] = a[n];
