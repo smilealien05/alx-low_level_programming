@@ -1,7 +1,7 @@
 #include"main.h"
 /**
  * reverse_array - function reverse array
- * @a: array 
+ * @a: array
  * @n: intiger that mean size of case in array
  * Return: void
 */
