@@ -8,15 +8,20 @@
 
 char *rot13(char *str)
 {
-int i;
+int i, j;
+char *crt = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char *rev = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
 
 for (i = 0; str[i] != '\0'; i++)
 {
-char c = str[i];
-if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+for (j = 0; crt[j] != '\0'; j++)
 {
-char base = (c >= 'a' && c <= 'z') ? 'a' : 'A';
-str[i] = (c - base + 13) % 26 + base;
+if (crt[j] == str[i])
+{
+str[i] = rev[j];
+break;
+}
 }
 }
 return (str);
