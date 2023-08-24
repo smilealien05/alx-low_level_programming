@@ -9,23 +9,23 @@
 void print_number(int n)
 {
 int divisor = 1;
-int temp = n;
-
+int temp = 0;
+int i;
 if (n < 0)
 {
 _putchar('-');
 n = -n;
 }
+temp = n;
 while (temp > 9)
 {
 divisor *= 10;
 temp /= 10;
 }
-while (divisor > 0)
+while(divisor > 0)
 {
-int digit = n / divisor;
-_putchar('0' + digit);
-n %= divisor;
+i = (n/divisor) % 10;
+_putchar(i + '0');
 divisor /= 10;
 }
 }
