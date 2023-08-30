@@ -1,28 +1,5 @@
 #include "main.h"
 
-
-
-/**
- * _strchr - locates a character in a string
- * @s: pointer to string
- * @c: character to locate
- *
- * Return: pointer to first occurrence of c in s
- * or NULL if character is not found
- */
-char *_strchr(char *s, char c)
-{
-int i;
-
-for (i = 0; s[i] != '\0'; i++)
-{
-if (s[i] == c)
-{
-return (s + i);
-}
-}
-return (0);
-}
 /**
  * _strstr - locates a substring
  * @haystack: pointer to string
@@ -34,14 +11,21 @@ return (0);
 
 char *_strstr(char *haystack, char *needle)
 {
-int i;
+	for (; *haystack != '\0'; haystack++)
+	{
+		char *l = haystack;
+		char *p = needle;
 
-for (i = 0; haystack[i] != '\0'; i++)
-{
-if (_strchr(haystack + i, needle[0]) != 0)
-{
-return (haystack + i);
+		while (*l == *p && *p != '\0')
+		{
+			l++;
+			p++;
+		}
+
+		if (*p == '\0')
+			return (haystack);
+	}
+
+	return (0);
 }
-}
-return (0);
-}
+
