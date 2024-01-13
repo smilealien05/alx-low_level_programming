@@ -1,8 +1,9 @@
 #include <stdio.h>
 /**
- * main - program that prints its name, followed by a new line.
+ * main - program that prints its name
  * @argc: integer
  * @argv: list of character
+ * Return: always 0
  */
 
 int main(int argc, char const *argv[])
