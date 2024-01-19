@@ -9,19 +9,15 @@
 */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-int *a;
-unsigned int arrsize = nmemb * size;
+char *a;
 unsigned int b;
 
 if (nmemb == 0 || size == 0)
 return (NULL);
-a = malloc(arrsize);
+a = malloc(nmemb * size);
 if (a == NULL)
 return (NULL);
-for (b = 0; b < arrsize; b++)
-{
+for (b = 0; b < (nmemb * size); b++)
 a[b] = 0;
-}
 return (a);
 }
-
