@@ -1,23 +1,27 @@
 #include "main.h"
 
 /**
- * _calloc - allocates memory for an array, initialized to 0
- * @nmemb: number of elements
- * @size: byte size of each element
- *
- * Return: void pointer to array space
- */
+* _calloc - allocates memory for an array of @nmemb elements of
+* @size bytes each and returns a pointer to the allocated memory.
+* @nmemb: allocate memory for array
+* @size: allocate element of size bytes
+* Return: pointer to the allocated memory.
+*/
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *p;
+int *a;
+unsigned int arrsize = nmemb * size;
+unsigned int b;
 
-	if (!nmemb || !size)
-		return (NULL);
-	p = malloc(nmemb * size);
-	if (!p)
-		return (NULL);
-	nmemb *= size;
-	while (nmemb--)
-		p[nmemb] = 0;
-	return (p);
+if (nmemb == 0 || size == 0)
+return (NULL);
+a = malloc(arrsize);
+if (a == NULL)
+return (NULL);
+for (b = 0; b < arrsize; b++)
+{
+a[b] = 0;
 }
+return (a);
+}
+
