@@ -1,1 +1,1 @@
-readme of more_singly_linked_lists
+readme of more singly linked lists
