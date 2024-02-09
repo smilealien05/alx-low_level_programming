@@ -2,8 +2,8 @@
 
 /**
  * _pow - func calculates (base ^ power)
- * @base: base of the exponent
- * @power: power of the exponent
+ * @b: base of the exponent
+ * @p: power of the exponent
  *
  * Return: value of (base ^ power)
  */
